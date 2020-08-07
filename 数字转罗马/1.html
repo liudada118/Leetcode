@@ -1,0 +1,57 @@
+<script>
+    var intToRoman = function(num) {
+
+    let a = Math.floor(num/1000)
+    let b = Math.floor((num-a*1000)/100)
+    let c = Math.floor((num-a*1000-b*100)/10)
+    let d = Math.floor(num-a*1000-b*100-c*10)
+    let e = ''
+    for(let i = 0;i<a;i++){
+        e+='M'
+    }
+    if(b<=3){
+        for(let i = 0;i<a;i++){
+        e+='C'
+    }
+    }else if(b>5&&b<9){
+        e += 'D'
+        for(let i = 0 ;i<b-5;i++){
+            dd += 'C'
+        }
+    }else if(b == 4){
+        e+='CD'
+    }else if(b == 9){
+        e+='CM'
+    }
+    if(c<=3){
+        for(let i = 0;i<c;i++){
+        e+='X'
+    }
+    }else if(c>5&&c<9){
+        e += 'L'
+        for(let i = 0 ;i<c-5;i++){
+            dd += 'X'
+        }
+    }else if(c == 4){
+        e+='XL'
+    }else if(c == 9){
+        e+='XC'
+    }
+    if(d<=3){
+        for(let i = 0;i<d;i++){
+        e+='I'
+    }
+    }else if(d>5&&d<9){
+        e += 'V'
+        for(let i = 0 ;i<d-5;i++){
+            dd += 'I'
+        }
+    }else if(d == 4){
+        e+='IV'
+    }else if(d == 9){
+        e+='IX'
+    }
+    return e
+};
+console.log(intToRoman(10))
+</script>

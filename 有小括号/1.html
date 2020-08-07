@@ -1,0 +1,15 @@
+<script>
+    var isValid = function(s) {
+    if(s==''){
+        return false
+    }
+    let arr = ['()','[]','{}']
+    for(let a of arr){
+        if(s.includes(a)){
+            return true
+        }
+    }
+    return false
+};
+console.log(isValid('()'))
+</script>

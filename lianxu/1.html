@@ -1,0 +1,26 @@
+<script>
+    var maxPower = function (s) {
+        let a = ''
+        let b = 1
+        let max = 1
+        for (let code of s) {
+            console.log(code,s)
+            if (a == code) {
+                b += 1
+                console.log(a,b)
+                if(max<b){
+                    max = b
+                }
+                continue
+            } else {
+                if(max<b){
+                    max = b
+                }
+                b = 1
+                a = code
+                console.log(a)
+            }
+        }return max
+    };
+    console.log(maxPower("cc"))
+</script>

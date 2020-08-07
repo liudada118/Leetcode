@@ -1,0 +1,18 @@
+<script>
+    var printVertically = function (s) {
+        let arr
+        s.split(' ')
+        for (let i = 0; i < s.length; i++) {
+            for (let a = 0; a < s.length; a++) {
+                // i = 0
+                for (let code of s[a]) {
+                    arr.push(code)
+                    // i++
+                    // console.log(arr[i])
+                }
+            }
+        }
+        return arr
+    };
+    console.log(printVertically("HOW ARE YOU"))
+</script>

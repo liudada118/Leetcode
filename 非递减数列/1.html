@@ -1,0 +1,35 @@
+<script>
+var checkPossibility = function(nums) {
+    let a = [...nums]
+    let b = [...nums]
+    let c = [...nums]
+    let d = [...nums]
+    let arr = []
+    for(let i = 0 ; i < a.length -1 ;i++){
+       if(a[i]>a[i+1]){
+           a.splice(i,1)
+           b.splice(i+1,1)
+           c.splice(i,1)
+           d.splice(i+1,1)
+           nums
+           break
+       }
+    }
+    console.log(a,b,nums)
+    c.sort(function(x,y){
+        return x-y
+    }) 
+    d.sort(function(x,y){
+        return x-y
+    }) 
+    if(a.join('') == c.join('')){
+        return true
+    }else if(b.join('') == d.join('')){
+        return true
+    }
+    else{
+        return false
+    }
+};
+console.log(checkPossibility([2,3,3,2,4]))
+</script>
