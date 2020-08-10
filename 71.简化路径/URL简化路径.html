@@ -1,0 +1,20 @@
+<script>
+     var resolve = function (baseUrl,moduleId) {
+        let arr = moduleId.split('/')
+        let b = []
+        for(let code of arr){
+            if (code != '' && code != '.') {
+                if(code=='..'){
+                    if(b.length == 0){
+                        continue ;
+                    }
+                    b.splice(b.length-1,1)
+                    continue
+                }
+                b.push(code)
+            }
+        }
+        return(baseUrl+'/'+b.join('/'))
+    };
+    console.log(resolve('http://www.baidu.com', 'a/b/c'))
+</script>
